@@ -11,5 +11,7 @@ public class Jurado {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_JURADO")
 	Integer idJurado;
+	
+	Integer idPessoa;
 
 }
