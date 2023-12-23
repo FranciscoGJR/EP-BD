@@ -1,6 +1,7 @@
 package com.oscar.model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
@@ -21,5 +22,11 @@ public class Edicao {
 	
 	@Column(name = "DATA")
 	private LocalDate data;
+
+	List<Premio> premios;
+	
+	List<Pessoa> jurados;
+	
+	List<Indicacao> indicacoes;
 
 }
