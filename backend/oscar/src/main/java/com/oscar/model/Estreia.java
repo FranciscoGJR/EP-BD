@@ -1,19 +1,21 @@
 package com.oscar.model;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class Premio {
+public class Estreia {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID_PREMIO")
-	private Integer idPremio;
+	@Column(name = "ID_ESTREIA")
+	private Integer idEstreia;
 	
-	private String nomeProprio;
+	@Column(name = "LOCALIZACAO")
+	private String localizacao;
 	
-	private Indicacao ganhador;
-
+	@Column(name = "ARRECADACAO_PRIMEIRO_ANO")
+	private Double arrecadacaoPrimeiroAno;
 }
