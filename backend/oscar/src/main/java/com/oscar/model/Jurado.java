@@ -10,8 +10,8 @@ public class Jurado {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_JURADO")
-	Integer idJurado;
-	
-	Integer idPessoa;
+	private Integer idJurado;
+
+	private Integer idPessoa;
 
 }

@@ -1,9 +1,11 @@
 package com.oscar.model;
 
+import jakarta.persistence.Column;
+
 public class Juri {
 
-	Integer idEdicao;
+	private Integer idEdicao;
 	
-	Integer idJurado;
+	private Integer idJurado;
 	
 }
