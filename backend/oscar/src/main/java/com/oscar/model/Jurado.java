@@ -1,5 +1,6 @@
 package com.oscar.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.constraints.NotNull;
@@ -10,7 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -20,7 +21,7 @@ public class Jurado {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID_JURADO")
+	@Column(name = "ID_JURADO", nullable = false)
 	private Integer idJurado;
 
 	@OneToOne
@@ -28,9 +29,8 @@ public class Jurado {
 	@NotNull
 	private Pessoa pessoa;
 
-	@OneToMany
-	@JoinColumn(name = "ID_EDICAO")
-	private List<Edicao> edicao;
+	@ManyToMany(mappedBy = "jurados")
+	private List<Edicao> edicao = new ArrayList<>();
 
 	public Jurado() {
 	}

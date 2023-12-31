@@ -1,6 +1,7 @@
 package com.oscar.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.constraints.NotNull;
@@ -21,7 +22,7 @@ public class Edicao {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID_EDICAO")
+	@Column(name = "ID_EDICAO", insertable = false, nullable = false)
 	private Integer idEdicao;
 
 	@Column(name = "NOME_EDICAO", length = 64, nullable = false)
@@ -34,9 +35,9 @@ public class Edicao {
 	@Column(name = "DATA")
 	private LocalDate data;
 
-	@ManyToMany
-	@JoinTable(name = "EDICAO_JURADO", joinColumns = @JoinColumn(name = "ID_EDICAO"), inverseJoinColumns = @JoinColumn(name = "ID_PESSOA"))
-	private List<Jurado> jurados;
+	@ManyToMany()
+	@JoinTable( name = "EDICAO_JURADO", joinColumns = { @JoinColumn(name = "EDICAO_ID")}, inverseJoinColumns = { @JoinColumn(name = "JURADO_ID")})
+	private List<Jurado> jurados = new ArrayList<>();
 
 	public Edicao() {
 	}

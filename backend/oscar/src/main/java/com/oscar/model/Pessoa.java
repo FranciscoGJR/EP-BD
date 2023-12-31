@@ -44,6 +44,18 @@ public class Pessoa {
 	public Pessoa() {
 	}
 
+	public Pessoa(@NotNull Integer id, @NotNull String nomeArtistico, @NotNull String nomeVerdadeiro, Sexo sexo,
+			LocalDate nascimento, String site, Integer anoInicioCarreira) {
+		super();
+		this.id = id;
+		this.nomeArtistico = nomeArtistico;
+		this.nomeVerdadeiro = nomeVerdadeiro;
+		this.sexo = sexo;
+		Nascimento = nascimento;
+		this.site = site;
+		this.anoInicioCarreira = anoInicioCarreira;
+	}
+
 	public Integer getId() {
 		return id;
 	}
