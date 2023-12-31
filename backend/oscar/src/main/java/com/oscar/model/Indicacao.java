@@ -38,4 +38,47 @@ public class Indicacao {
 	@JoinColumn(name = "ID_PESSOA")
 	private Pessoa pessoa;
 
+	public Indicacao() {
+	}
+
+	public Integer getIdIndicacao() {
+		return idIndicacao;
+	}
+
+	public void setIdIndicacao(Integer idIndicacao) {
+		this.idIndicacao = idIndicacao;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	public Filme getFilme() {
+		return filme;
+	}
+
+	public void setFilme(Filme filme) {
+		this.filme = filme;
+	}
+
+	public Edicao getEdicao() {
+		return edicao;
+	}
+
+	public void setEdicao(Edicao edicao) {
+		this.edicao = edicao;
+	}
+
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+
 }

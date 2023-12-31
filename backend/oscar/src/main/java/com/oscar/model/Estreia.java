@@ -28,4 +28,39 @@ public class Estreia {
 	@JoinColumn(name = "ID_FILME")
 	private Filme filme;
 
+	public Estreia() {
+	}
+
+	public Integer getIdEstreia() {
+		return idEstreia;
+	}
+
+	public void setIdEstreia(Integer idEstreia) {
+		this.idEstreia = idEstreia;
+	}
+
+	public String getLocalizacao() {
+		return localizacao;
+	}
+
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
+	}
+
+	public Double getArrecadacaoPrimeiroAno() {
+		return arrecadacaoPrimeiroAno;
+	}
+
+	public void setArrecadacaoPrimeiroAno(Double arrecadacaoPrimeiroAno) {
+		this.arrecadacaoPrimeiroAno = arrecadacaoPrimeiroAno;
+	}
+
+	public Filme getFilme() {
+		return filme;
+	}
+
+	public void setFilme(Filme filme) {
+		this.filme = filme;
+	}
+
 }

@@ -22,7 +22,7 @@ public class Jurado {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_JURADO")
 	private Integer idJurado;
-	
+
 	@OneToOne
 	@JoinColumn(name = "ID_PESSOA", nullable = false)
 	@NotNull
@@ -31,5 +31,32 @@ public class Jurado {
 	@OneToMany
 	@JoinColumn(name = "ID_EDICAO")
 	private List<Edicao> edicao;
+
+	public Jurado() {
+	}
+
+	public Integer getIdJurado() {
+		return idJurado;
+	}
+
+	public void setIdJurado(Integer idJurado) {
+		this.idJurado = idJurado;
+	}
+
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+
+	public List<Edicao> getEdicao() {
+		return edicao;
+	}
+
+	public void setEdicao(List<Edicao> edicao) {
+		this.edicao = edicao;
+	}
 
 }

@@ -30,4 +30,39 @@ public class Premio {
 	@JoinColumn(name = "ID_INDICACAO")
 	private Indicacao indicacao;
 
+	public Premio() {
+	}
+
+	public Integer getIdPremio() {
+		return idPremio;
+	}
+
+	public void setIdPremio(Integer idPremio) {
+		this.idPremio = idPremio;
+	}
+
+	public String getNomeProprio() {
+		return nomeProprio;
+	}
+
+	public void setNomeProprio(String nomeProprio) {
+		this.nomeProprio = nomeProprio;
+	}
+
+	public Edicao getEdicao() {
+		return edicao;
+	}
+
+	public void setEdicao(Edicao edicao) {
+		this.edicao = edicao;
+	}
+
+	public Indicacao getIndicacao() {
+		return indicacao;
+	}
+
+	public void setIndicacao(Indicacao indicacao) {
+		this.indicacao = indicacao;
+	}
+
 }

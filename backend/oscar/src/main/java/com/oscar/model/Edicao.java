@@ -38,4 +38,47 @@ public class Edicao {
 	@JoinTable(name = "EDICAO_JURADO", joinColumns = @JoinColumn(name = "ID_EDICAO"), inverseJoinColumns = @JoinColumn(name = "ID_PESSOA"))
 	private List<Jurado> jurados;
 
+	public Edicao() {
+	}
+
+	public Integer getIdEdicao() {
+		return idEdicao;
+	}
+
+	public void setIdEdicao(Integer idEdicao) {
+		this.idEdicao = idEdicao;
+	}
+
+	public String getNomeEdicao() {
+		return nomeEdicao;
+	}
+
+	public void setNomeEdicao(String nomeEdicao) {
+		this.nomeEdicao = nomeEdicao;
+	}
+
+	public String getLocalizacao() {
+		return localizacao;
+	}
+
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
+	}
+
+	public LocalDate getData() {
+		return data;
+	}
+
+	public void setData(LocalDate data) {
+		this.data = data;
+	}
+
+	public List<Jurado> getJurados() {
+		return jurados;
+	}
+
+	public void setJurados(List<Jurado> jurados) {
+		this.jurados = jurados;
+	}
+
 }
