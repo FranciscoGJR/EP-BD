@@ -1,25 +1,41 @@
 package com.oscar.model;
 
+import javax.validation.constraints.NotNull;
+
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "INDICACAO")
 public class Indicacao {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_INDICACAO")
 	private Integer idIndicacao;
-	
-	@Column(name = "CATEGORIA")
+
+	@Column(name = "CATEGORIA", nullable = false)
+	@NotNull
 	private Categoria categoria;
-	
-	@Column(name = "FILME")
+
+	@OneToOne
+	@JoinColumn(name = "ID_FILME", nullable = false)
+	@NotNull
 	private Filme filme;
-	
-	@Column(name = "PESSOA")
+
+	@OneToOne
+	@JoinColumn(name = "ID_EDICAO", nullable = false)
+	@NotNull
+	private Edicao edicao;
+
+	@OneToOne
+	@JoinColumn(name = "ID_PESSOA")
 	private Pessoa pessoa;
-	
-	
+
 }
