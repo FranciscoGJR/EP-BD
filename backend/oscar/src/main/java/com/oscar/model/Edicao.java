@@ -39,7 +39,7 @@ public class Edicao {
 	@JoinTable( name = "JURADOS", 
 				joinColumns = { @JoinColumn(name = "ID_EDICAO")}, 
 				inverseJoinColumns = { @JoinColumn(name = "ID_")})
-	private List<Pessoa> jurados;
+	private List<Pessoa> jurados = new ArrayList<>();
 
 	
 	public Edicao() {

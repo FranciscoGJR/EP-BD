@@ -45,7 +45,7 @@ public class Pessoa {
 	private Integer anoInicioCarreira;
 
 	@ManyToMany(mappedBy = "jurados")
-	private List<Edicao> edicao;
+	private List<Edicao> edicao = new ArrayList<>();
 	
 	public Pessoa() {
 	}
