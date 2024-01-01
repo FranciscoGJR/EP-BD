@@ -38,6 +38,18 @@ public class Filme {
 
 	public Filme() {
 	}
+	
+	public Filme(Integer idFilme, String titulo, String idiomaOriginal, LocalDate dataDeProducao, String nacionalidade,
+			String nomeEmPortugues, String genero) {
+		super();
+		this.idFilme = idFilme;
+		this.titulo = titulo;
+		this.idiomaOriginal = idiomaOriginal;
+		this.dataDeProducao = dataDeProducao;
+		this.nacionalidade = nacionalidade;
+		this.nomeEmPortugues = nomeEmPortugues;
+		this.genero = genero;
+	}
 
 	public Integer getIdFilme() {
 		return idFilme;
