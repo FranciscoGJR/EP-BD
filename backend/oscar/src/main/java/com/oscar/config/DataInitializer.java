@@ -65,6 +65,8 @@ public class DataInitializer implements CommandLineRunner {
 		Estreia estreia1 = new Estreia(1, "Localizacao", 10.00d, filme1);
 		estreiaService.save(estreia1);
 		
+		edicaoService.addJurado(edicao1, pessoa1);
+		System.out.println(pessoa1.getEdicoes().toString());
 	}
 
 }
