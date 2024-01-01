@@ -18,10 +18,14 @@ public class PessoaService {
 	public void save(Pessoa pessoa) {
 		entityManager.createNativeQuery(
 				"INSERT INTO PESSOA (ID_PESSOA, NOME_ARTISTICO, NOME_VERDADEIRO, SEXO, DATA_NASCIMENTO, SITE, ANO_INICIO_CARREIRA) VALUES(? , ? , ? , ? , ? , ? , ?)")
-				.setParameter(1, pessoa.getId()).setParameter(2, pessoa.getNomeArtistico())
-				.setParameter(3, pessoa.getNomeVerdadeiro()).setParameter(4, pessoa.getSexo())
-				.setParameter(5, pessoa.getNascimento()).setParameter(6, pessoa.getSite())
-				.setParameter(7, pessoa.getAnoInicioCarreira()).executeUpdate();
+				.setParameter(1, pessoa.getId())
+				.setParameter(2, pessoa.getNomeArtistico())
+				.setParameter(3, pessoa.getNomeVerdadeiro())
+				.setParameter(4, pessoa.getSexo())
+				.setParameter(5, pessoa.getNascimento())
+				.setParameter(6, pessoa.getSite())
+				.setParameter(7, pessoa.getAnoInicioCarreira())
+				.executeUpdate();
 	}
 
 }
