@@ -40,6 +40,18 @@ public class Indicacao {
 
 	public Indicacao() {
 	}
+	
+
+	public Indicacao(Integer idIndicacao, @NotNull Categoria categoria, @NotNull Filme filme, @NotNull Edicao edicao,
+			Pessoa pessoa) {
+		super();
+		this.idIndicacao = idIndicacao;
+		this.categoria = categoria;
+		this.filme = filme;
+		this.edicao = edicao;
+		this.pessoa = pessoa;
+	}
+
 
 	public Integer getIdIndicacao() {
 		return idIndicacao;
