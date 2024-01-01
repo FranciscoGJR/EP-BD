@@ -2,6 +2,8 @@ package com.oscar.model;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotNull;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -16,6 +18,7 @@ public class Filme {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_FILME")
+	@NotNull
 	private Integer idFilme;
 
 	@Column(name = "TITULO")

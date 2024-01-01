@@ -38,7 +38,7 @@ public class Edicao {
 	@ManyToMany()
 	@JoinTable( name = "JURADOS", 
 				joinColumns = { @JoinColumn(name = "ID_EDICAO")}, 
-				inverseJoinColumns = { @JoinColumn(name = "ID_")})
+				inverseJoinColumns = { @JoinColumn(name = "ID_PESSOA")})
 	private List<Pessoa> jurados = new ArrayList<>();
 
 	
@@ -87,4 +87,12 @@ public class Edicao {
 		this.data = data;
 	}
 
+	public List<Pessoa> getJurados() {
+		return jurados;
+	}
+
+	public void setJurados(List<Pessoa> jurados) {
+		this.jurados = jurados;
+	}
+	
 }

@@ -8,12 +8,14 @@ import org.springframework.stereotype.Component;
 
 import com.oscar.model.Categoria;
 import com.oscar.model.Edicao;
+import com.oscar.model.Estreia;
 import com.oscar.model.Filme;
 import com.oscar.model.Indicacao;
 import com.oscar.model.Pessoa;
 import com.oscar.model.Premio;
 import com.oscar.model.Sexo;
 import com.oscar.service.EdicaoService;
+import com.oscar.service.EstreiaService;
 import com.oscar.service.FilmeService;
 import com.oscar.service.IndicacaoService;
 import com.oscar.service.PessoaService;
@@ -36,6 +38,9 @@ public class DataInitializer implements CommandLineRunner {
 	
 	@Autowired
 	private PremioService premioService;
+	
+	@Autowired
+	private EstreiaService estreiaService;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -54,8 +59,11 @@ public class DataInitializer implements CommandLineRunner {
 		Indicacao indicacao1 = new Indicacao(1, Categoria.MELHOR_ATOR_PRINCIPAL, filme1, edicao1, pessoa1);
 		indicacaoService.save(indicacao1);
 		
-		Premio premio = new Premio(1, "Nome Proprio", edicao1, indicacao1);
-		premioService.save(premio);
+		Premio premio1 = new Premio(1, "Nome Proprio", edicao1, indicacao1);
+		premioService.save(premio1);
+		
+		Estreia estreia1 = new Estreia(1, "Localizacao", 10.00d, filme1);
+		estreiaService.save(estreia1);
 		
 	}
 

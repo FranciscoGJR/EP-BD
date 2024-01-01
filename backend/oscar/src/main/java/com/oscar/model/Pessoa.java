@@ -45,7 +45,7 @@ public class Pessoa {
 	private Integer anoInicioCarreira;
 
 	@ManyToMany(mappedBy = "jurados")
-	private List<Edicao> edicao = new ArrayList<>();
+	private List<Edicao> edicoes = new ArrayList<>();
 	
 	public Pessoa() {
 	}
@@ -116,6 +116,14 @@ public class Pessoa {
 
 	public void setAnoInicioCarreira(Integer anoInicioCarreira) {
 		this.anoInicioCarreira = anoInicioCarreira;
+	}
+
+	public List<Edicao> getEdicoes() {
+		return edicoes;
+	}
+
+	public void setEdicoes(List<Edicao> edicoes) {
+		this.edicoes = edicoes;
 	}
 
 }
