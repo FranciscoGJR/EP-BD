@@ -30,6 +30,14 @@ public class Estreia {
 
 	public Estreia() {
 	}
+	
+	public Estreia(Integer idEstreia, String localizacao, Double arrecadacaoPrimeiroAno, Filme filme) {
+		super();
+		this.idEstreia = idEstreia;
+		this.localizacao = localizacao;
+		this.arrecadacaoPrimeiroAno = arrecadacaoPrimeiroAno;
+		this.filme = filme;
+	}
 
 	public Integer getIdEstreia() {
 		return idEstreia;
