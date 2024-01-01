@@ -36,11 +36,24 @@ public class Edicao {
 	private LocalDate data;
 
 	@ManyToMany()
-	@JoinTable( name = "EDICAO_JURADO", joinColumns = { @JoinColumn(name = "EDICAO_ID")}, inverseJoinColumns = { @JoinColumn(name = "JURADO_ID")})
-	private List<Jurado> jurados = new ArrayList<>();
+	@JoinTable( name = "JURADOS", 
+				joinColumns = { @JoinColumn(name = "ID_EDICAO")}, 
+				inverseJoinColumns = { @JoinColumn(name = "ID_")})
+	private List<Pessoa> jurados;
 
+	
 	public Edicao() {
 	}
+
+	
+	public Edicao(Integer idEdicao, @NotNull String nomeEdicao, String localizacao, LocalDate data) {
+		super();
+		this.idEdicao = idEdicao;
+		this.nomeEdicao = nomeEdicao;
+		this.localizacao = localizacao;
+		this.data = data;
+	}
+
 
 	public Integer getIdEdicao() {
 		return idEdicao;
@@ -72,14 +85,6 @@ public class Edicao {
 
 	public void setData(LocalDate data) {
 		this.data = data;
-	}
-
-	public List<Jurado> getJurados() {
-		return jurados;
-	}
-
-	public void setJurados(List<Jurado> jurados) {
-		this.jurados = jurados;
 	}
 
 }

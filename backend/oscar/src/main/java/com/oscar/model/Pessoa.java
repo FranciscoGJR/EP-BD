@@ -1,6 +1,8 @@
 package com.oscar.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
@@ -9,6 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -41,6 +44,9 @@ public class Pessoa {
 	@Column(name = "ANO_INICIO_CARREIRA")
 	private Integer anoInicioCarreira;
 
+	@ManyToMany(mappedBy = "jurados")
+	private List<Edicao> edicao;
+	
 	public Pessoa() {
 	}
 

@@ -32,6 +32,16 @@ public class Premio {
 
 	public Premio() {
 	}
+	
+
+	public Premio(Integer idPremio, String nomeProprio, Edicao edicao, Indicacao indicacao) {
+		super();
+		this.idPremio = idPremio;
+		this.nomeProprio = nomeProprio;
+		this.edicao = edicao;
+		this.indicacao = indicacao;
+	}
+
 
 	public Integer getIdPremio() {
 		return idPremio;
