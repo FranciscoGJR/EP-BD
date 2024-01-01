@@ -34,6 +34,15 @@ public class Jurado {
 
 	public Jurado() {
 	}
+	
+	
+	public Jurado(Integer idJurado, @NotNull Pessoa pessoa, List<Edicao> edicao) {
+		super();
+		this.idJurado = idJurado;
+		this.pessoa = pessoa;
+		this.edicao = edicao;
+	}
+
 
 	public Integer getIdJurado() {
 		return idJurado;
